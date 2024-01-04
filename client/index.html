@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="/client/images/dwm-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>DWM Globe</title>
+</head>
+<body>
+    <section>
+        <!-- -------------------- NAVBAR---------------- -->
+        <div class="nav-bar">
+            <a href="#" class="logo"><img src="/client/images/dwm-logo.png" width="50px" alt="Logo" srcset=""></a>
+            <div class="toggle" onclick="toggleFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <ul id="list">
+                <li><a href="#">About Us</a></li>
+                <hr>
+                <li><a href="#">Messages</a></li>
+                <hr>
+                <li><a href="#">Giving</a></li>
+                <hr>
+                <li><a href="#">Services</a></li>
+                <hr>
+                <li><a href="#">Prayer Request</a></li>
+            </ul>
+        </div>
+                <!-- --------------------END OF NAVBAR---------------- -->
+
+                <div class="hero-container">
+                    <div class="text-container">
+                    <h2 class="small-text">WELCOME TO </h2>
+                    <h2 class="big-text">DIVINE WISDOM</h2>
+                    <h2 class="big-text"> MINISTRIES</h2>
+                </div>
+                </div>
+
+    </section>
+    <section style="height: 100vh;">
+
+    </section>
+
+    <script>
+        var toggle = document.getElementById("toggler");
+        const nav = document.querySelector(".nav-bar");
+        const list = document.querySelector("#list");
+        function toggleFunction(x) {
+        x.classList.toggle("change");
+        list.classList.toggle("list-container");
+        nav.classList.toggle("nav");
+}
+        
+    </script>
+    
+</body>
+</html>

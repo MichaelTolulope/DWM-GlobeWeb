@@ -1,0 +1,200 @@
+body{
+    margin: 0;
+    padding:0 ;
+    background-color: bisque;
+    font-family:'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.18'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");}
+/* -- -------------------- NAVBAR------------------- -- */
+
+.nav-bar{
+    position:absolute;
+    border-radius:20px;
+    width: 60%;
+    left: 5%;
+    padding: 10px 15%;
+    display: flex;
+    /* display: block; */
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    background-color: white;
+    margin-top: 10px;
+    z-index: 1;
+    animation:fade-down 1s;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+}
+
+@keyframes fade-down {
+    0%{
+    opacity: 0;
+    transform: translateY(-30px), scale(0.9);
+    } 
+    100%{
+        opacity: 1;
+        transform: translateY(0), scale(1);
+        }    
+}
+.nav-bar .logo{
+    text-decoration: none;
+    transition: 0.8s;
+}
+.nav-bar .logo:hover{
+    scale:1.1;
+}
+.nav-bar ul{
+    list-style: none;
+    display: flex; 
+    padding-inline-start: 0;
+}
+.nav-bar ul li{
+    margin-right: 20px;
+
+}
+.nav-bar ul li a{
+    text-decoration: none;
+}
+a{
+    color:rgb(2, 2, 32);
+    transition: 1s;
+}
+a:hover{
+    color: blueviolet;
+}
+.toggle {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+    border-radius: 20px;
+  }
+
+  .change .bar1 {
+    transform: translate(0, 9px) rotate(-45deg);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    transform: translate(0, -9px) rotate(45deg);
+  }
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+/* -- --------------------END OF NAVBAR------------------- -- */
+
+/* -- ---------------------HERO SECTION-------------------------- -- */
+.hero-container{
+    background-image:linear-gradient(rgba(42, 41, 41,0.65),rgba(42, 41, 41,0.65)),url("/client/images/dwm-service.jpg"), linear-gradient(rgba(62, 61, 61,0.5),rgba(62, 61, 61,0.5));
+    height:100vh;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur();
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: -20px; */
+}
+
+.hero-container .text-container{
+    /* border:solid black 1px; */
+    line-height: 10px;
+    height: fit-content;
+    width: fit-content;
+    margin: auto;
+    padding: 20px 40px;
+    border-radius:20px;
+    position: relative;
+    top:200px;
+    background-image: radial-gradient(rgba(28, 27, 27, 0.9),rgba(78, 76, 76,0.5));
+    box-shadow: 0 60px 80px rgba(0,0,0,0.60), 0 45px 26px rgba(0,0,0,0.14);
+    animation: fade-down 2.5s;
+    transition: 1s;
+}
+.hero-container .text-container:hover{
+    scale: 1.2;
+}
+.hero-container .text-container h2{
+    color:white;
+}
+.hero-container .text-container .small text{
+    font-size: 2rem;
+    font-weight: 900;
+}
+.hero-container .text-container .big-text{
+    line-height: 10px;
+    font-size: 3.5rem;
+    font-weight:900;
+}
+
+
+@media (max-width:858px) {
+    /* -- -------------------- NAVBAR------------------- -- */
+
+    .nav-bar{
+        /* display: block; */
+        text-align: left;
+        
+    }
+    .toggle{display: inline-block;
+    /* position: relative;
+    left:10%; */
+}
+    .nav-bar ul{
+        display:none;
+        width: 100%;
+        text-align: center;
+    }
+    .nav-bar ul li{
+        margin: 10px;
+    }
+    .nav-bar .list-container {
+
+    display: inline-block;
+}
+.nav{
+    display: block;
+    
+}
+.nav .toggle{
+   position: relative;
+   left: 80%;
+}
+
+/* -- --------------------END OF NAVBAR------------------- -- */
+
+}
+@media (max-width:539px) {
+    .hero-container .text-container{
+        line-height: 15px;
+    }
+    .hero-container .text-container .big-text{
+        font-size: 2rem;
+        white-space: nowrap;
+        
+    }
+    .hero-container .text-container .small-text{
+        font-size: 1.3rem;
+    }
+    
+}
+@media (max-width:300px) {
+    .hero-container .text-container .big-text{
+        font-size: 2rem;
+        white-space: nowrap;
+    }
+    .hero-container .text-container .small-text{
+        font-size: 1.3rem;
+    }
+}
