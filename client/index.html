@@ -18,15 +18,15 @@
                 <div class="bar3"></div>
             </div>
             <ul id="list">
-                <li><a href="#">About Us</a></li>
+                <li><a href="#">Home</a></li>
                 <hr>
-                <li><a href="#">Messages</a></li>
+                <li><a href="#">About Us</a></li>
                 <hr>
                 <li><a href="#">Giving</a></li>
                 <hr>
                 <li><a href="#">Services</a></li>
                 <hr>
-                <li><a href="#">Prayer Request</a></li>
+                <li><a href="#">Resources</a></li>
             </ul>
         </div>
                 <!-- --------------------END OF NAVBAR---------------- -->
@@ -45,6 +45,7 @@
     </section>
 
     <script>
+        // nav bar toggle
         var toggle = document.getElementById("toggler");
         const nav = document.querySelector(".nav-bar");
         const list = document.querySelector("#list");
@@ -53,6 +54,15 @@
         list.classList.toggle("list-container");
         nav.classList.toggle("nav");
 }
+
+document.addEventListener('scroll',()=>{
+    if(window.scrollY > 10){
+        nav.classList.add("nav-bar-scrolled");
+    }
+    else{
+        nav.classList.remove("nav-bar-scrolled");
+    }
+})
         
     </script>
     
