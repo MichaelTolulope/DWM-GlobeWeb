@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="shortcut icon" href="/client/images/dwm-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <title>DWM Globe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <title>DWM Globe</title>
 </head>
 <body>
+    <!-- todo:=> pre - loader -->
+    <div class="content">
     <section class="home">
         <!-- -------------------- NAVBAR---------------- -->
         <div class="nav-bar">
@@ -18,9 +20,9 @@
                 <div class="bar3"></div>
             </div>
             <ul id="list">
-                <li><a href="#">Home</a></li>
+                <li><a class="active-link" href="index.html">Home</a></li>
                 <hr>
-                <li><a href="#">About Us</a></li>
+                <li><a href="about.html">About Us</a></li>
                 <hr>
                 <li><a href="#">Giving</a></li>
                 <hr>
@@ -65,9 +67,9 @@
            </div>   
 
     </section>
-    <section style="height: 100vh;">
-        <div class="values-containers">
-            <h2>OUR VALUES</h2>
+    <section class="contents" style="height: 100vh;">
+        <h2>OUR VALUES</h2>
+        <div class="values-container">
             <div class="value wisdom">Wisdom</div>
             <div class="value annointing">Annonting</div>
             <div class="value love">Love</div>
@@ -75,71 +77,67 @@
             <div class="value sacrifice">Sacrifice</div>
             
         </div>
+        <div class="about-us-btn"><a href="#">More about us</a></div>
 
     </section>
-
-    <script>
-        // nav bar toggle
-        var toggle = document.getElementById("toggler");
-        const nav = document.querySelector(".nav-bar");
-        const list = document.querySelector("#list");
-        function toggleFunction(x) {
-        x.classList.toggle("change");
-        list.classList.toggle("list-container");
-        nav.classList.toggle("nav");
-}
-    // nav bar onscroll animation effect
-document.addEventListener('scroll',()=>{
-    if(window.scrollY > 10){
-        nav.classList.add("nav-bar-scrolled");
-    }
-    else{
-        nav.classList.remove("nav-bar-scrolled");
-    }
-});
-
-    //carousel btns slide effect
-
-    const slider = document.querySelector(".carousel-slider");
-
-    const carouselBtnRight = document.querySelector(".right");
-    const carouselBtnLeft = document.querySelector(".left");
-    const indicatorParent = document.querySelector('.controls ul');
-
-
-    var sectionIndex =  0;
-
-
-    carouselBtnRight.addEventListener('click',()=>{
-        document.querySelector('.controls .selected-slider-indicator').classList.remove('selected-slider-indicator');
-        sectionIndex = (sectionIndex<2)?sectionIndex+1:2;
-        indicatorParent.children[sectionIndex].classList.add('selected-slider-indicator');
-        slider.style.transform='translate('+(sectionIndex)*-33.33+'%)'
-
-    });
-
-    carouselBtnLeft.addEventListener('click',()=>{
-        document.querySelector('.controls .selected-slider-indicator').classList.remove('selected-slider-indicator');
-        sectionIndex = (sectionIndex>0)?sectionIndex-1:0;    
-        indicatorParent.children[sectionIndex].classList.add('selected-slider-indicator');
-        slider.style.transform='translate('+(sectionIndex)*-33.33+'%)'
-
-    })
-
-    //slider indicator
-
-document.querySelectorAll('.controls ul li').forEach(function(indicator,ind){
-sectionIndex = ind;
-    indicator.addEventListener('click',function(){
-        document.querySelector('.controls .selected-slider-indicator').classList.remove('selected-slider-indicator');
-        indicator.classList.add('selected-slider-indicator')
-        slider.style.transform='translate('+(ind)*-33.33+'%)'
-
-    })
-});
     
-        
-    </script>
+
+</div>
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Onsite Address</h4>
+                <ul style="display: flex;">
+                    <li style="margin-right: 10px;">
+                       <i style="color: white;" class="fas fa-map-marker-alt"></i>
+                    </li>
+                    <li>
+                        <a class="address" href="https://www.google.com/maps/dir/6.4386381,3.5056907/Platinum+Wy,+Lekki+Penninsula+II,+Lagos+106104,+Lagos/@6.4387234,3.462947,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x103bf6807c0ba91b:0x8b1947d974caf129!2m2!1d3.5025964!2d6.4388145?entry=ttu">Eros Hotel,Platinum Way,
+                         Jakande First Gate, Lekki-Epe Express Way, Lagos.</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Sermons</a></li>
+                    <li><a href="#">Programmes</a></li>
+                    <li><a href="">Give</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Prayer Request</a></li>
+                    <li><a href="#">Share Testimony</a></li>
+                    <li><a href="#">Messages</a></li>
+                    <li><a href="#">Programmes</a></li>
+                    <li><a href="">Give</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col last-col">
+                <h4>Follow us</h4>
+                <div class="social-links">
+                  
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a class="mixlr" href="#"><img src="/client//images/icons/mixlr-1.svg" alt="" srcset="" width="50px"></a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</footer>
+
+ <script src="index.js"></script>
     
 </body>
 </html>

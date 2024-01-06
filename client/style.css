@@ -55,18 +55,45 @@ body{
 }
 .nav-bar ul li{
     margin-right: 20px;
+    transition: 0.55s;
 
 }
 .nav-bar ul li a{
     text-decoration: none;
-}
-a{
     color:rgb(2, 2, 32);
     transition: 1s;
+    position: relative;
 }
-a:hover{
-    color: blueviolet;
+.nav-bar ul li a::after{
+    content: '';
+    position: absolute;
+    background-color: orange;
+    width:0;
+    left: 0;
+    bottom: -3.5px;;
+    height: 2px;
+    border-radius: 20px;
+    transition: 0.3s ease-in;
 }
+.nav-bar ul li a:hover::after{
+    width: 100%;
+}
+.nav-bar ul li a:hover{
+    color: rgb(111, 74, 4);
+}
+.nav-bar ul li .active-link{
+    color: rgb(111, 74, 4);
+}
+.nav-bar ul li .active-link::after{
+    content: '';
+    position: absolute;
+    background-color: orange;
+    width:100%;
+    left: 0;
+    bottom: -3.5px;;
+    height: 2px;
+}
+
 .toggle {
     display: none;
     cursor: pointer;
@@ -238,6 +265,66 @@ hr {
 }
 /* -- -----------------------END OF HERO SECTION-------------- -- */
 
+.contents{
+    padding:0 50px;
+    position: relative;
+}
+/* -- -----------------------VALUES SECTION-------------- -- */
+.about-us-btn{
+    position: absolute;
+    right:30px;
+    top:135px;
+    padding:10px 20px;
+    border:solid 1px orange;
+    color: rgb(59, 17, 74);
+    border-radius:20px;
+    transition: 0.5s;
+    z-index:1 ;
+}
+.about-us-btn:hover{
+    color:white;
+}
+.about-us-btn::after{
+    content: '';
+    position:absolute;
+    top:0;
+    bottom:0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(to right,orange,rgb(248, 188, 77),rgb(233, 215, 183));
+    border-radius:25px;
+    z-index:-1 ;
+    width:0;
+    /* transform: scaleX(0);
+    transform-origin: left; */
+    transition: 0.8s ease-in-out;
+}
+.about-us-btn:hover::after,.about-us-btn:focus::before{
+    /* transform: scaleX(1); */
+    width:100%;
+    
+}
+.about-us-btn a{text-decoration: none;}
+
+
+.values-container{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    overflow-x: scroll;
+    margin: auto;
+
+}
+
+.value{
+    min-width:240px;
+    height:250px;
+    border:solid 1px black;
+    border-radius:10px;
+    margin:10px;
+   
+
+}
 @media (max-width:858px) {
     /* -- -------------------- NAVBAR------------------- -- */
 
@@ -300,4 +387,104 @@ hr {
     .hero-container .text-container .small-text{
         font-size: 1.3rem;
     }
+}
+
+
+/* ----------footer */
+.footer{
+    background-color: #24262b;
+    padding: 50px 0;
+    border-top-left-radius: 150px;
+}
+.footer .container{
+    max-width: 80%;
+    margin: auto;
+    /* padding-left: 50px; */
+   
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0;
+    
+    
+}
+ul a{text-decoration: none;color: #bbbb;transition: 0.2s;}
+ul a:hover{
+    padding-left: 10px;
+}
+ul .address{padding: 0 !important;margin-right: 30px;}
+.footer-col h4{
+    color: white;
+    text-transform: capitalize;
+    font-size: 18px;
+    margin-bottom: 30px;
+    position: relative;
+}
+.footer-col h4::before{
+    content:'';
+    position: absolute;
+    width: 30%;
+    height: 2px;
+    border-radius: 20px;
+    left: 0;
+    bottom: -10px;
+    background-color: orange;
+}
+.social-links{
+    align-items: center;
+}
+
+.social-links a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 0 10px 10px 0;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.55);
+    line-height: 40px;
+    text-align: center;
+    color: white;
+}
+.social-links a:hover{
+    background-color: white;
+    color:#24262b ;
+    scale: 1.15;
+}
+.social-links .mixlr{
+    width: 80px;
+    border-radius: 20px;
+    margin: 0;
+}
+.social-links .mixlr:hover{
+    background-color: rgba(255, 255, 255, 0.89);
+    scale: 1.05;
+}
+
+@media (max-width:900px) {
+.footer-col{
+    width: 50%;
+}    
+}
+@media (max-width:600px) {
+.footer-col{
+    width: 100%;  
+}  
+}
+@media (max-width:400px) {
+    .about-us-btn{
+
+    }
+    .footer{padding-top:25% ;}
 }
