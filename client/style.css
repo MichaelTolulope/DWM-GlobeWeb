@@ -6,7 +6,11 @@ body{
 
     background-color: transparent;
     background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.18'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");}
-/* -- -------------------- NAVBAR------------------- -- */
+
+.home{
+    overflow: hidden;
+}
+    /* -- -------------------- NAVBAR------------------- -- */
 
 .nav-bar{
     position:fixed;
@@ -112,9 +116,54 @@ hr {
 /* -- --------------------END OF NAVBAR------------------- -- */
 
 /* -- ---------------------HERO SECTION-------------------------- -- */
+.carousel-slider{
+    /* border:5px solid pink; */
+    width: 300vw;
+    overflow: hidden;
+    display:flex;
+    position: relative;
+    transition: all 0.55s;
+    
+}
+.controls .left, .right{
+    position: absolute;
+    top:50%;
+    color:white;
+    cursor: pointer;
+    opacity: 0.52;
+}
+.controls .left{
+    left: 15px;
+}
+.controls .right{
+    right:15px;
+}
+.controls ul{
+    position:absolute;
+    bottom: 10px;
+    left:47%;
+    margin:0;
+    padding: 0;
+    display: flex;
+
+}
+.controls ul li{
+    list-style: none;
+    margin-right:10px;
+    width:10px;
+    height: 10px; 
+    border:solid 2px white;
+    border-radius: 50%;
+
+}
+.selected-slider-indicator{
+    background-color: white;
+}
+
 .hero-container{
     background-image:linear-gradient(rgba(42, 41, 41,0.65),rgba(42, 41, 41,0.65)),url("/client/images/dwm-service.jpg"), linear-gradient(rgba(62, 61, 61,0.5),rgba(62, 61, 61,0.5));
     height:100vh;
+    width: 100vw;
     background-position:center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -125,7 +174,8 @@ hr {
     /* margin-top: -20px; */
 }
 
-.hero-container .text-container{
+
+.hero-container .text-container, .hero-container2 .text-container, .hero-container3 .text-container{
     /* border:solid black 1px; */
     line-height: 10px;
     height: fit-content;
@@ -140,22 +190,53 @@ hr {
     animation: fade-down 2.5s;
     transition: 1s;
 }
-.hero-container .text-container:hover{
+.text-container:hover{
     scale: 1.2;
 }
-.hero-container .text-container h2{
+.text-container h2{
     color:white;
 }
-.hero-container .text-container .small text{
+.text-container .small text{
     font-size: 2rem;
     font-weight: 900;
 }
-.hero-container .text-container .big-text{
+.text-container .big-text{
     line-height: 10px;
     font-size: 3.5rem;
     font-weight:900;
 }
+.giant-text{
+    font-size: 5.5rem !important;
+    margin-top: 15px;
+}
+.hero-container2{
+    background-image:linear-gradient(rgba(42, 41, 41,0.65),rgba(42, 41, 41,0.65)),url("/client/images/dwm-servicepic4.jpg"), linear-gradient(rgba(62, 61, 61,0.5),rgba(62, 61, 61,0.5));
+    height:100vh;
+    width: 100vw;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+    /* margin-top: -20px; */
+}
 
+.hero-container3{
+    background-image:linear-gradient(rgba(42, 41, 41,0.65),rgba(42, 41, 41,0.65)),url("/client/images/dwm-servicepic5.jpg"), linear-gradient(rgba(62, 61, 61,0.5),rgba(62, 61, 61,0.5));
+    height:100vh;
+    width: 100vw;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+    /* margin-top: -20px; */
+}
+/* -- -----------------------END OF HERO SECTION-------------- -- */
 
 @media (max-width:858px) {
     /* -- -------------------- NAVBAR------------------- -- */
@@ -188,6 +269,10 @@ hr {
 .nav .toggle{
    position: relative;
    left: 80%;
+}
+
+.controls .left, .controls .right{
+    display: none;
 }
 
 /* -- --------------------END OF NAVBAR------------------- -- */

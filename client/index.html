@@ -8,7 +8,7 @@
     <title>DWM Globe</title>
 </head>
 <body>
-    <section>
+    <section class="home">
         <!-- -------------------- NAVBAR---------------- -->
         <div class="nav-bar">
             <a href="#" class="logo"><img src="/client/images/dwm-logo.png" width="50px" alt="Logo" srcset=""></a>
@@ -31,16 +31,50 @@
         </div>
                 <!-- --------------------END OF NAVBAR---------------- -->
 
+          <div class="carousel-slider">      
                 <div class="hero-container">
                     <div class="text-container">
-                    <h2 class="small-text">WELCOME TO </h2>
-                    <h2 class="big-text">DIVINE WISDOM</h2>
-                    <h2 class="big-text"> MINISTRIES</h2>
+                        <h2 class="small-text">WELCOME TO </h2>
+                        <h2 class="big-text">DIVINE WISDOM</h2>
+                        <h2 class="big-text"> MINISTRIES</h2>
+                    </div>
                 </div>
+                <div class="hero-container2">
+                    <div class="text-container">
+                        <h2 class="small-text">RAISING  </h2>
+                        <h2 class="big-text">KINGDOM </h2>
+                        <h2 class="big-text giant-text"> GIANTS</h2>
+                    </div>
                 </div>
+                <div class="hero-container3">
+                    <div class="singleton-text">JESUS</div>
+                    <div class="text-container">
+                        <h2 class="big-text">JESUS</h2>
+                        <h2 class="big-text"> REVEALED</h2>
+                    </div>
+                </div>
+           </div>  
+           <div class="controls">
+            <span class="left"><img src="/client/images/icons/chevron-left.svg"></span>
+            <span class="right"><img src="/client/images/icons/chevron-right.svg"></span>
+            <ul>
+                <li class="selected-slider-indicator"></li>
+                <li></li>
+                <li></li>
+            </ul>
+           </div>   
 
     </section>
     <section style="height: 100vh;">
+        <div class="values-containers">
+            <h2>OUR VALUES</h2>
+            <div class="value wisdom">Wisdom</div>
+            <div class="value annointing">Annonting</div>
+            <div class="value love">Love</div>
+            <div class="value excellence">Excellence</div>
+            <div class="value sacrifice">Sacrifice</div>
+            
+        </div>
 
     </section>
 
@@ -54,7 +88,7 @@
         list.classList.toggle("list-container");
         nav.classList.toggle("nav");
 }
-
+    // nav bar onscroll animation effect
 document.addEventListener('scroll',()=>{
     if(window.scrollY > 10){
         nav.classList.add("nav-bar-scrolled");
@@ -62,7 +96,48 @@ document.addEventListener('scroll',()=>{
     else{
         nav.classList.remove("nav-bar-scrolled");
     }
-})
+});
+
+    //carousel btns slide effect
+
+    const slider = document.querySelector(".carousel-slider");
+
+    const carouselBtnRight = document.querySelector(".right");
+    const carouselBtnLeft = document.querySelector(".left");
+    const indicatorParent = document.querySelector('.controls ul');
+
+
+    var sectionIndex =  0;
+
+
+    carouselBtnRight.addEventListener('click',()=>{
+        document.querySelector('.controls .selected-slider-indicator').classList.remove('selected-slider-indicator');
+        sectionIndex = (sectionIndex<2)?sectionIndex+1:2;
+        indicatorParent.children[sectionIndex].classList.add('selected-slider-indicator');
+        slider.style.transform='translate('+(sectionIndex)*-33.33+'%)'
+
+    });
+
+    carouselBtnLeft.addEventListener('click',()=>{
+        document.querySelector('.controls .selected-slider-indicator').classList.remove('selected-slider-indicator');
+        sectionIndex = (sectionIndex>0)?sectionIndex-1:0;    
+        indicatorParent.children[sectionIndex].classList.add('selected-slider-indicator');
+        slider.style.transform='translate('+(sectionIndex)*-33.33+'%)'
+
+    })
+
+    //slider indicator
+
+document.querySelectorAll('.controls ul li').forEach(function(indicator,ind){
+sectionIndex = ind;
+    indicator.addEventListener('click',function(){
+        document.querySelector('.controls .selected-slider-indicator').classList.remove('selected-slider-indicator');
+        indicator.classList.add('selected-slider-indicator')
+        slider.style.transform='translate('+(ind)*-33.33+'%)'
+
+    })
+});
+    
         
     </script>
     
