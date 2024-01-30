@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/client/images/dwm-logo.png" type="image/x-icon">
+    <title>DWMGlobe/Giving</title>
+    <style>
+        .heading{
+            width: 80%;
+            border: solid orange 1px;
+            border-radius: 15px;
+            background-image:linear-gradient(rgba(15, 15, 15, 0.8),rgba(15, 15, 15, 0.8)),url("/client/images/dwm-service.jpg");
+            background-size: cover;
+            text-align: center;
+            align-items: center;
+            margin: auto;
+            position: relative;
+            top: 150px;
+            padding: 35px 30px;
+            
+        }
+        .heading-text{
+            color: white;
+            font-size: 3.5em;
+            text-shadow: 5px 5px 10px black;
+            
+            
+        }
+        .card-payment-section{
+            margin: auto;
+            width: 60%;
+            text-align: center;
+           
+        }
+        .pay-with-card-text{
+           
+            margin-top: 200px;
+            color: #000;
+            
+        }
+
+        .card-payments{
+            margin: auto;
+            height: 400px;
+            width: 350px;
+            border: solid 1px red;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+            border-radius: 20px;
+            transition: 0.5s ease-in-out;
+        }
+        .payment-container{
+            display: flex;
+        }
+
+    /* ------------------------ form */
+    input{
+        padding: 5px;
+    
+
+    }
+    td{
+        margin: 20px 10px;
+    }
+   
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <a href="#" class="logo"><img src="/client/images/dwm-logo.png" width="50px" alt="Logo" srcset=""></a>
+        <div class="toggle" onclick="toggleFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <ul id="list">
+            <li><a  href="index.html">Home</a></li>
+            <hr>
+            <li><a  href="about.html">About Us</a></li>
+            <hr>
+            <li><a class="active-link" href="givingPage.html">Giving</a></li>
+            <hr>
+            <li><a href="#">Services</a></li>
+            <hr>
+            <li><a href="#">Resources</a></li>
+        </ul>
+    </div>
+
+    <!-- -------------------------Heading--------------------- -->
+    <div class="heading">
+        <h2 class="heading-text">Donations, Offerings & Tithes</h2>
+    </div>
+
+    <!-- -----------------------pay with card------------- -->
+    <div class="card-payment-section">
+        <h2 class="pay-with-card-text heading-text">Pay with card</h2>
+    <div class="payment-container">
+        <div class="payStack card-payments">
+
+        </div>
+        <form action="" method="post">
+            <table>
+            <tr>
+                <td>
+            <label for="firstname">Firstname:</label></td>
+            <td>
+            <input type="text" id="firstname" class="firstname" required></td>
+            <td>
+            <label for="laststname">Lastname:</label></td>
+            <td>
+            <input type="text" id="email" class="firstname" required></td>
+        </tr>
+        <tr>
+            <td>
+            <label for="email">Email:</label></td>
+            <td>
+            <input type="email" id="email" class="email" required></td>
+
+            <td>
+            <label for="state">State/Country:</label></td>
+            <td>
+            <input type="text" id="state" class="state"></td>
+        </tr>
+
+           <tr>
+            <td><input type="submit" value="submit"></td>
+           </tr>
+            
+        </table>
+
+            
+        </form>
+    </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
