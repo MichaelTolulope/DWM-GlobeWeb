@@ -452,6 +452,9 @@ hr {
 .controls .left, .controls .right{
     display: none;
 }
+.carousel-slider{
+    overflow-x: auto;
+}
 
 
 /* -- --------------------END OF NAVBAR media queries------------------- -- */
@@ -629,9 +632,7 @@ ul .address{padding: 0 !important;margin-right: 30px;}
 
     }
     .footer{padding-top:25% ;}
-    .carousel-slider{
-        overflow-x:auto ;
-    }
+
     .hero-container .text-container, .hero-container2 .text-container, .hero-container3 .text-container{
         background-image: none;
         box-shadow: none;
