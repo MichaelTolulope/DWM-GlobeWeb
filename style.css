@@ -191,7 +191,7 @@ hr {
 }
 
 .hero-container{
-    background-image:linear-gradient(rgba(42, 41, 41,0.65),rgba(42, 41, 41,0.65)),url("/client/images/dwm-service.jpg"), linear-gradient(rgba(62, 61, 61,0.5),rgba(62, 61, 61,0.5));
+    background-image:linear-gradient(rgba(42, 41, 41,0.65),rgba(42, 41, 41,0.65)),url("/images/dwm-service.jpg"), linear-gradient(rgba(62, 61, 61,0.5),rgba(62, 61, 61,0.5));
     height:100vh;
     width: 100vw;
     background-position:center;
@@ -240,7 +240,7 @@ hr {
     margin-top: 15px;
 }
 .hero-container2{
-    background-image:linear-gradient(rgba(42, 41, 41,0.65),rgba(42, 41, 41,0.65)),url("/client/images/dwm-servicepic4.jpg"), linear-gradient(rgba(62, 61, 61,0.5),rgba(62, 61, 61,0.5));
+    background-image:linear-gradient(rgba(42, 41, 41,0.65),rgba(42, 41, 41,0.65)),url("/images/dwm-servicepic4.jpg"), linear-gradient(rgba(62, 61, 61,0.5),rgba(62, 61, 61,0.5));
     height:100vh;
     width: 100vw;
     background-position:center;
@@ -254,7 +254,7 @@ hr {
 }
 
 .hero-container3{
-    background-image:linear-gradient(rgba(42, 41, 41,0.65),rgba(42, 41, 41,0.65)),url("/client/images/dwm-servicepic5.jpg"), linear-gradient(rgba(62, 61, 61,0.5),rgba(62, 61, 61,0.5));
+    background-image:linear-gradient(rgba(42, 41, 41,0.65),rgba(42, 41, 41,0.65)),url("/images/dwm-servicepic5.jpg"), linear-gradient(rgba(62, 61, 61,0.5),rgba(62, 61, 61,0.5));
     height:100vh;
     width: 100vw;
     background-position:center;
