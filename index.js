@@ -57,14 +57,20 @@ sectionIndex = ind;
     })
 });
 
-function fetchPage(pageName){
+const style = window.getComputedStyle(slider)
+const matrix = style['transform'] || style.webkitTransform || style.mozTransform 
 
-    fetch(pageName + ".html").then(respnse => respnse.text())
-    .then(html => {
-        document,querySelector('.content').innerHTML = html;
-    })
-    .catch(error=>console.error('Error: ',error));
-}
+
+
+
+// function fetchPage(pageName){
+
+//     fetch(pageName + ".html").then(respnse => respnse.text())
+//     .then(html => {
+//         document,querySelector('.content').innerHTML = html;
+//     })
+//     .catch(error=>console.error('Error: ',error));
+// }
     
 
 function switchPage(pageName){

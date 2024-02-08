@@ -29,8 +29,8 @@ section{
     background-color: white;
     margin-top: 10px;
     z-index: 10;
-    animation:fade-down 1s;
-    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+    animation:fade-down 1.2s;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.20);
     transition: 0.55s;
 }
 
@@ -98,7 +98,7 @@ section{
 }
 
 .toggle {
-    display: none;
+    /* display: none; */
     cursor: pointer;
   }
   
@@ -120,6 +120,7 @@ section{
   .change .bar3 {
     transform: translate(0, -9px) rotate(45deg);
   }
+  
 
 hr {
     border: 0;
@@ -136,7 +137,7 @@ hr {
     border-radius: 0;
     margin-top: 0;
     left: 0;
-    box-shadow: 0 60px 80px rgba(0,0,0,0.60), 0 45px 26px rgba(0,0,0,0.14);
+    box-shadow: 0 60px 80px rgba(0,0,0,0.50), 0 45px 26px rgba(0,0,0,0.09);
 
     
     
@@ -169,11 +170,8 @@ hr {
     right:15px;
 }
 .controls ul{
-    position:absolute;
-    bottom: 10px;
-    left:47%;
-    margin:0;
-    padding: 0;
+ position: relative;
+  bottom: 40px;
     display: flex;
 
 }
@@ -189,9 +187,13 @@ hr {
 .selected-slider-indicator{
     background-color: white;
 }
-
+.indicators-container{
+    margin: auto;
+    width: fit-content;
+}
 .hero-container{
     background-image:linear-gradient(rgba(42, 41, 41,0.65),rgba(42, 41, 41,0.65)),url("./images/dwm-service.jpg"), linear-gradient(rgba(62, 61, 61,0.5),rgba(62, 61, 61,0.5));
+    display: inline-block;
     height:100vh;
     width: 100vw;
     background-position:center;
@@ -240,6 +242,7 @@ hr {
     margin-top: 15px;
 }
 .hero-container2{
+    display: inline-block;
     background-image:linear-gradient(rgba(42, 41, 41,0.65),rgba(42, 41, 41,0.65)),url("./images/dwm-servicepic4.jpg"), linear-gradient(rgba(62, 61, 61,0.5),rgba(62, 61, 61,0.5));
     height:100vh;
     width: 100vw;
@@ -254,6 +257,7 @@ hr {
 }
 
 .hero-container3{
+    display: inline-block;
     background-image:linear-gradient(rgba(42, 41, 41,0.65),rgba(42, 41, 41,0.65)),url("./images/dwm-servicepic5.jpg"), linear-gradient(rgba(62, 61, 61,0.5),rgba(62, 61, 61,0.5));
     height:100vh;
     width: 100vw;
@@ -408,6 +412,10 @@ hr {
     .values-container{
     width: 100%;
     }
+    .nav .toggle{
+        position: relative;
+        left: 75%;
+     }
 }
 @media (max-width:817px) {
     .value img{
@@ -452,9 +460,11 @@ hr {
 .controls .left, .controls .right{
     display: none;
 }
-.carousel-slider{
-    overflow-x: auto;
-}
+/* .home{
+overflow:auto;
+scrollbar-width: 0;
+
+} */
 
 
 /* -- --------------------END OF NAVBAR media queries------------------- -- */
@@ -479,6 +489,7 @@ hr {
     .hero-container .text-container .small-text{
         font-size: 1.3rem;
     }
+ 
     
 }
 @media (max-width:300px) {
@@ -488,6 +499,10 @@ hr {
     }
     .hero-container .text-container .small-text{
         font-size: 1.3rem;
+    }
+    .nav .toggle{
+        position: relative;
+        left: 50%;
     }
 }
 
@@ -636,6 +651,9 @@ ul .address{padding: 0 !important;margin-right: 30px;}
     .hero-container .text-container, .hero-container2 .text-container, .hero-container3 .text-container{
         background-image: none;
         box-shadow: none;
+    }
+    .nav .toggle{
+        left: 70%;
     }
 
 }
