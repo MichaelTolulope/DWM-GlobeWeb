@@ -717,27 +717,28 @@ ul .address{padding: 0 !important;margin-right: 30px;}
     }
 
 }
-@media (max-width:270px) {
+@media (max-width:250px) {
   
     .hero-container .text-container .big-text{
-        font-size: 2rem;
+        font-size: 2.5rem;
+        flex-wrap: wrap;
         
     }
     .hero-container .text-container .small-text{
-        font-size: 1.8rem;
-        line-height: 35px;
+        font-size: 1.5rem;
+        line-height: 32px;
     }
     .hero-container2 .text-container .big-text{
-        font-size: 2rem;
+        font-size: 1.9rem;
         line-height: 35px;
     }
     .hero-container3 .text-container .big-text{
-        font-size: 2.5rem;
+        font-size: 1.9rem;
         line-height: 35px;
     }
     
     .giant-text{
-        font-size: 4rem !important;
+        font-size: 3rem !important;
     }
 
 }
