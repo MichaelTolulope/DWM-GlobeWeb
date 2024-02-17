@@ -717,5 +717,29 @@ ul .address{padding: 0 !important;margin-right: 30px;}
     }
 
 }
+@media (max-width:270px) {
+  
+    .hero-container .text-container .big-text{
+        font-size: 2rem;
+        
+    }
+    .hero-container .text-container .small-text{
+        font-size: 1.8rem;
+        line-height: 35px;
+    }
+    .hero-container2 .text-container .big-text{
+        font-size: 2rem;
+        line-height: 35px;
+    }
+    .hero-container3 .text-container .big-text{
+        font-size: 2.5rem;
+        line-height: 35px;
+    }
+    
+    .giant-text{
+        font-size: 4rem !important;
+    }
+
+}
 
 /* --------------------END OF FOOTER-------------- */
