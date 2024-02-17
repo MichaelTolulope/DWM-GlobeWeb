@@ -242,6 +242,9 @@ hr {
     font-size: 5.5rem !important;
     margin-top: 15px;
 }
+.multiple-text{
+    line-height: 20px !important;
+}
 .hero-container2{
     display: inline-block;
     background-image:linear-gradient(rgba(42, 41, 41,0.65),rgba(42, 41, 41,0.65)),url("./images/dwm-servicepic4.jpg"), linear-gradient(rgba(62, 61, 61,0.5),rgba(62, 61, 61,0.5));
@@ -566,7 +569,8 @@ ul{
     
     
 }
-ul a{text-decoration: none;color: #bbbb;transition: 0.2s;}
+ul a{text-decoration: none;
+    color: #bbbb;transition: 0.2s;}
 .footer-col ul a:hover{
     padding-left: 10px;
 }
@@ -632,10 +636,11 @@ ul .address{padding: 0 !important;margin-right: 30px;}
     left: 30%;
  }
 }
-@media (max-width:400px) {
-    .about-us-btn{
 
-    }
+
+
+@media (max-width:400px) {
+
     .footer{padding-top:25% ;}
 
     .hero-container .text-container, .hero-container2 .text-container, .hero-container3 .text-container{
@@ -644,7 +649,7 @@ ul .address{padding: 0 !important;margin-right: 30px;}
         margin-top: 50px;
         margin: auto;
         padding: 0;
-        width: 90%;
+        width: 100%;
         text-align: center;
         
     }
@@ -656,6 +661,7 @@ ul .address{padding: 0 !important;margin-right: 30px;}
         font-size: 3.5rem;
         line-height: 55px;
         white-space: wrap;
+        margin: auto;
     }
     .hero-container .text-container .small-text{
         font-size: 1.8rem;
@@ -664,6 +670,50 @@ ul .address{padding: 0 !important;margin-right: 30px;}
     .nav .toggle{
         position: relative;
         left: 50%;
+    }
+
+
+}
+
+@media (max-width:350px) {
+    .hero-container .text-container, .hero-container2 .text-container, .hero-container3 .text-container{
+        width: 100%;
+    }
+    .hero-container .text-container .big-text{
+        font-size: 3rem;
+        line-height: 55px;
+        white-space: wrap;
+    }
+    .hero-container .text-container .small-text{
+        font-size: 1.8rem;
+        line-height: 35px;
+    }
+    .giant-text{
+        font-size: 5rem !important;
+    }
+}
+
+@media (max-width:300px) {
+  
+    .hero-container .text-container .big-text{
+        font-size: 2.5rem;
+        
+    }
+    .hero-container .text-container .small-text{
+        font-size: 1.8rem;
+        line-height: 35px;
+    }
+    .hero-container2 .text-container .big-text{
+        font-size: 2.5rem;
+        line-height: 35px;
+    }
+    .hero-container3 .text-container .big-text{
+        font-size: 2.5rem;
+        line-height: 35px;
+    }
+    
+    .giant-text{
+        font-size: 4.5rem !important;
     }
 
 }
